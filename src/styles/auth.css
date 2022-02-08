@@ -1,0 +1,311 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.signup-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+.signup-img img {
+    height: 100%;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 15px;
+}
+
+.site-name {
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title1 {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    margin: 7px 0;
+}
+
+.title2 {
+    font-family: 'Inter', sans-serif;
+    margin: 7px 0;
+}
+
+.signup-titles .title1 {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    line-height: 2.4rem;
+}
+
+.signup-titles .title2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+.signup-form input {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #707070;
+    padding-left: 15px;
+    background-color: #f6f6f6;
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.input {
+    outline: none;
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}
+
+.input::placeholder,
+.button {
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.signup-btn {
+    cursor: pointer;
+    height: 50px;
+    border: 1px solid blue;
+    background-color: blue;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.google-btn {
+    cursor: pointer;
+    height: 50px;
+    border: 1px solid #00000030;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.signup-form p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.login-btn {
+    cursor: pointer;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid blue;
+    font-size: 1.1rem;
+    color: blue;
+}
+
+.footer {
+    border-top: 1px solid #707070;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.auth-logo {
+    width: 70px;
+}
+
+.auth-other__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-other__options p {
+    padding: 3px;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.auth-other__options .auth-method__register {
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 1280px) {
+    .signup {
+        width: 40%;
+    }
+    
+    .signup-titles .title1 {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+    }
+    
+    .signup-titles .title2 {
+        font-size: 1.5rem;
+    }
+    
+    .signup-form input {
+        height: 55px;
+        font-size: 1rem;
+    }
+    
+    .signup-btn {
+        height: 55px;
+        font-size: 1.1rem;
+    }
+    
+    .google-btn {
+        height: 55px;
+        font-size: 1.1rem;
+    }
+    
+    .login-btn {
+        height: 55px;
+        font-size: 1.1rem;
+    }
+    
+    .site-name {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .signup-img {
+        display: block;
+        width: 60%;
+    }
+    
+    .signup-img img {
+        height: 380px;
+    }
+    
+    .signup {
+        width: 40%;
+    }
+    
+    .signup-titles .title1 {
+        font-size: 1.6rem;
+    }
+    
+    .signup-titles .title2 {
+        font-size: 1.2rem;
+    }
+    
+    .signup-form input {
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .signup-btn {
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .google-btn {
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .login-btn {
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .site-name {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .signup-img {
+        display: none;
+    }
+
+    .site-name {
+        text-align: center;
+    }
+
+    .signup {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .signup-form input {
+        width: calc(255px - 15px);
+        height: 40px;
+        font-size: .9rem;
+    }
+
+    .signup-titles .title1 {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+    }
+
+    .signup-titles .title2 {
+        font-size: 1rem;
+    }
+    
+    .signup-form p {
+        font-size: 1rem;
+    }
+
+    .modal-login {
+        width: 300px;
+        height: 275px;
+    }
+
+    .login-form input {
+        width: calc(270px - 15px);
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .login-btn__modal {
+        width: 270px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .login-form p {
+        font-size: 1rem;
+    }
+}
