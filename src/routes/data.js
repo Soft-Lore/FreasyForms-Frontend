@@ -29,6 +29,10 @@ export const routes = {
         {
             path: "/surveys",
             element: Surveys
+        },
+        {
+            path: '/auth',
+            element: Auth
         }
     ],
     root: [
