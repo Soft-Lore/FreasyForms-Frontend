@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import image from '../../assets/login-image.jpg'
+import image from '../../assets/login-image.png'
 import logo from '../../assets/logo.jpg'
 import { Footer } from '../organisms/index'
 import { Modal } from '../moleculs/index'
@@ -33,20 +33,22 @@ export default function Auth() {
             </div>
             <div className="form-container">
                 <form className="signup-form">
-                    <input className='input' type="text" placeholder="Nombre" name="name" />
-                    <input className='input' type="email" placeholder="Correo electronico" name="email"/>
-                    <input className='input' type="password" placeholder="Contraseña" name="password"/>
-                    <input className='input' type="password" placeholder="Confirmar contraseña" name="password"/>
-                    <button className="button signup-btn" type="button">Registrarse</button>
+                    <input autoComplete='off' className='input-auth input' type="text" placeholder="Nombre" name="name" />
+                    <input className='input-auth input' type="email" placeholder="Correo electronico" name="email"/>
+                    <input className='input-auth input' type="password" placeholder="Contraseña" name="password"/>
+                    <input className='input-auth input' type="password" placeholder="Confirmar contraseña" name="password"/>
+                    <button className="button signup-btn" type="button">
+                      Registrarse
+                    </button>
                     <div className='auth-other__options'>
-                      <p>or</p>
+                      <p className='signup-form__or'>or</p>
                       <div>
                         <AiFillGoogleCircle className='auth-method__register google'/>
                         <AiFillFacebook className='auth-method__register facebook'/>
                       </div>
                     </div>
-                    <p>Ya tienes una cuenta?</p>
-                    <button className="button login-btn" type="button" onClick={e => toggleModal(e)}>Iniciar sesion</button>
+                    <p className='signup-question'>¿Ya tienes una cuenta?</p>
+                    <button className="button login-btn login-btn__modal" type="button" onClick={e => toggleModal(e)}>Iniciar sesion</button>
                 </form>
             </div>
         </div>
@@ -55,10 +57,10 @@ export default function Auth() {
     <Modal show={show} toggle={toggleModal}>
       <h2 className='title1'>Iniciar sesion</h2>
       <form className="login-form">
-          <input className='input' type="text" placeholder="Usuario o Correo electronico" name="useremail"/>
-          <input className='input' type="password" placeholder="Contraseña" name="password"/>
-          <button className="button login-btn__modal">Iniciar sesion</button>
-          <p>Has olvidado la contraseña?</p>
+          <input className='input-auth input login-form__input' type="email" placeholder="Usuario o Correo electronico" name="useremail"/>
+          <input className='input-auth input login-form__input' type="password" placeholder="Contraseña" name="password"/>
+          <button className="button login-button">Iniciar sesion</button>
+          <p>¿Has olvidado la contraseña?</p>
       </form>
     </Modal>
     </>

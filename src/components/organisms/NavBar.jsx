@@ -46,46 +46,42 @@ export default function NavBar({menu, setMenu}) {
         </ul>
         <div className="dropdown-menu" onClick={() => setMenu(value => !value)}>
             <img className="dropbtn-right" src={menu_2} alt="menu-tres-rayas" data-dropdown-button />
-            <ul className={menu ? "active-dropdown-menu" : ''}>
+            <div className={menu ? "active-dropdown-menu" : 'inactive-dropdown-menu'}>
                 {
                     token ? (
-                        <>
-                         <li className="img-profile-right">
-                            <div className="img-right-container">
-                                <img src={profile} alt="img-profile" />
-                            </div>
-                        </li>
-                        <li className="username">
-                            <span>@BaBuni69</span>
-                        </li>
-                        <li>
-                            <a className='paragraph' href="#">Formularios</a>
-                        </li>
-                        <li>
-                            <a className='paragraph' href="#">Mis formularios</a>
-                        </li>
-                        <li>
-                            <a className='paragraph' href="#">Crear formualrio</a>
-                        </li>
-                        <li>
-                            <a className='paragraph' href="#">Editar perfil</a>
-                        </li>
-                        <li>
-                            <a className='paragraph' href="#">No se que mas</a>
-                        </li>
-                        </>
+                        <ul className='dropdown-list'>
+                            <li className="dropdown-list__profile">
+                                <img src={profile} className="dropdown-profile__img" alt="img-profile" />
+                                <span className='dropdown-profile__username'>@BaBuni69</span>
+                            </li>
+                            <li>
+                                <a className='paragraph' href="#">Formularios</a>
+                            </li>
+                            <li>
+                                <a className='paragraph' href="#">Mis formularios</a>
+                            </li>
+                            <li>
+                                <a className='paragraph' href="#">Crear formualrio</a>
+                            </li>
+                            <li>
+                                <a className='paragraph' href="#">Editar perfil</a>
+                            </li>
+                            <li>
+                                <a className='paragraph' href="#">No se que mas</a>
+                            </li>
+                        </ul>
                     ) : (
-                        <>
+                        <ul className='dropdown-list'>
                             <li>
                                 <a className='paragraph' href="#" target="_blank">Formularios</a>
                             </li>
                             <li>
                                 <a className='paragraph' className="start-btn" href="../pages/SignUp.html">Comenzar</a>
                             </li>
-                        </>
+                        </ul>
                     )
                 }
-            </ul>
+            </div>
         </div>
     </nav>
   )

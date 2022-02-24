@@ -17,68 +17,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
-.modal-login {
-    width: max-content;
-    height: max-content;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 6px #0000003b;
-    text-align: right;
-    padding: 5px 30px;
+@keyframes modal-animation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
-.closed-btn {
-    position: absolute;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-    color: black;
-    padding: none;
-    /* background-color: blue; */
-    cursor: pointer;
-}
-
-.modal-login h2 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.login-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.login-form input {
-    width: calc(405px - 15px);
-    height: 50px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid #707070;
-    padding-left: 15px;
-    background-color: #f6f6f6;
-    color: #707070;
-    font-size: 1.1rem;
-}
-
-.login-btn__modal {
-    cursor: pointer;
-    height: 50px;
-    border: 1px solid blue;
-    background-color: blue;
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    width: 100%;
-}
-
-.login-form p {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #0000ff;
+@media screen and (max-width: 470px) {
+    .modal-login {
+        width: 100%;
+    }
 }
