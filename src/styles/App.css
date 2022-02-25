@@ -369,6 +369,111 @@ template {
   margin: 0;
 }
 
+.input {
+  outline: none;
+}
+
+.input::placeholder,
+.button {
+  font-family: sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.button-effect-one::after {
+  background-color: #000094;
+}
+
+.button-effect-one-red::after {
+  background-color: #940000;
+}
+
+.button-effect-one::after,
+.button-effect-one-red::after,
+.button-effect-two::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.button-effect-two::after {
+  background-color: transparent;
+  transition: transform .5s ease-in-out;
+  border-radius: 100px;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+}
+
+.button-effect-one::after,
+.button-effect-one-red::after {
+  transition: transform .2s ease-in;
+  transform: translateY(-100%);
+  border-radius: 0 0 50% 50%;
+  width: 100%;
+  height: 120px;
+  top: 0;
+  left: 0;
+}
+
+.button-effect-one-red {
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+}
+
+.button-effect-one {
+  border: 1px solid blue;
+  background-color: blue;
+}
+
+
+.button-effect-two,
+.button-effect-one,
+.button-effect-one-red {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button-effect-two {
+  border: 1px solid blue;
+  color: blue;
+}
+
+.button-effect-one-red,
+.button-effect-one {
+  color: #ffffff;
+}
+
+.button-effect-one,
+.button-effect-one-red,
+.button-effect-two {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .button-effect-one:hover::after,
+  .button-effect-one-red:hover::after {
+      transform: translateY(0);
+  }
+
+  .button-effect-two:hover::after {
+    background-color: blue;
+  }
+
+  .button-effect-two:hover::after {
+    transform: scale(600);
+  }
+
+  .button-effect-two:hover {
+    color: white;
+  }
+}
+
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;500&family=Inter:wght@200;300&family=Rowdies:wght@700&display=swap');

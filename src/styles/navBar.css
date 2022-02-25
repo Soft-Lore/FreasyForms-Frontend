@@ -215,6 +215,28 @@
     }
 }
 
+.navbar-logout__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-logout__button,
+.navbar-cancel__button {
+    margin: 0 5px;
+    padding: 7px 0;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.title-logout {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 1.4rem;
+}
+
 @media screen and (max-width: 600px) {
     .dropbtn-right {
         display: block;

@@ -2,10 +2,13 @@ import React from "react";
 import useUser from "../hooks/useUser";
 import menu_1 from "../../assets/menu-tres-puntos.svg";
 import profile from "../../assets/snk-titan-steven.png";
+import { Modal } from "./index"
 import { Link } from "react-router-dom";
+import { useModal } from '../hooks/index'
 
 export default function ItemsNavBar({ menu, setMenu }) {
   const { logout, isLogged } = useUser();
+  const {show, toggleModal} = useModal()
 
   return (
     <>
@@ -15,7 +18,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
             <Link to="/" target="_blank">
               Mis Formularios
             </Link>
-            <img className="dropdown" onClick={() => setMenu((value) => !value)} className="dropbtn" src={menu_1} alt="menu-tres-puntos" />
+            <img onClick={() => setMenu((value) => !value)} className="dropbtn" src={menu_1} alt="menu-tres-puntos" />
           </li>
           <li className={menu ? "dropdown-submenu dropdown-submenu__active" :"dropdown-submenu navbar-hidden"}>
             <ul>
@@ -31,7 +34,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
                 </li>
                 <li>
                     <button
-                        onClick={() => logout()}
+                        onClick={(e) => toggleModal(e)}
                         className="button button-logout navbar-item__link"
                     >
                         Cerrar Sesión
@@ -53,12 +56,19 @@ export default function ItemsNavBar({ menu, setMenu }) {
             </Link>
           </li>
           <li>
-            <Link className="navbar-item__link" className="start-btn" to="/">
+            <Link className="navbar-item__link" to="/">
               Comenzar
             </Link>
           </li>
         </ul>
       )}
+      <Modal show={show} toggle={toggleModal}>
+        <h1 className="title-logout">¿Seguro quieres Cerrar Sesión?</h1>
+        <div className="navbar-logout__buttons">
+            <button className="button-effect-one-red navbar-cancel__button" onClick={e => toggleModal(e)}>Cancelar</button>
+            <button className="button-effect-one navbar-logout__button" onClick={() => logout()}>Aceptar</button>
+        </div>
+      </Modal>
     </>
   );
 }

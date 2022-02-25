@@ -20,6 +20,27 @@
     z-index: 5;
 }
 
+.modal-login {
+    padding: 25px 30px;
+}
+
+.closed-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    color: rgba(26, 26, 26, 0.712);
+    padding: none;
+    cursor: pointer;
+}
+
+.modal-login h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 @keyframes modal-animation {
     from {
         transform: scale(0);
