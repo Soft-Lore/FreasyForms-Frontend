@@ -357,7 +357,8 @@ template {
   display: none;
 }
 
-.paragraph {
+.paragraph,
+.navbar-item__link {
   font-family: 'Inter', sans-serif;
   margin: 8px 0;
 }

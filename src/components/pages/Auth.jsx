@@ -4,9 +4,11 @@ import logo from '../../assets/logo.jpg'
 import { Footer } from '../organisms/index'
 import { Modal } from '../moleculs/index'
 import { AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
+import useUser from '../hooks/useUser';
 
 export default function Auth() {
   const [show, setShow] = useState(false)
+  const {login} = useUser()
 
   const toggleModal = (e) => {
     e.stopPropagation()
@@ -37,7 +39,7 @@ export default function Auth() {
                     <input className='input-auth input' type="email" placeholder="Correo electronico" name="email"/>
                     <input className='input-auth input' type="password" placeholder="Contraseña" name="password"/>
                     <input className='input-auth input' type="password" placeholder="Confirmar contraseña" name="password"/>
-                    <button className="button signup-btn" type="button">
+                    <button className="button signup-btn" type="button" onClick={() => login()}>
                       Registrarse
                     </button>
                     <div className='auth-other__options'>
@@ -59,7 +61,7 @@ export default function Auth() {
       <form className="login-form">
           <input className='input-auth input login-form__input' type="email" placeholder="Usuario o Correo electronico" name="useremail"/>
           <input className='input-auth input login-form__input' type="password" placeholder="Contraseña" name="password"/>
-          <button className="button login-button">Iniciar sesion</button>
+          <button className="button login-button" onClick={() => login()}>Iniciar sesion</button>
           <p>¿Has olvidado la contraseña?</p>
       </form>
     </Modal>

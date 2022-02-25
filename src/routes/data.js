@@ -3,7 +3,7 @@ import { AboutUs, Auth, CreateSurvey, MySurveys, Profile, ResultOfSurvey, Survey
 export const routes = {
     auth: [
         {
-            path: "/about-us",
+            path: "/",
             element: AboutUs
         },
         {
@@ -37,7 +37,7 @@ export const routes = {
     ],
     root: [
         {
-            path: '/auth',
+            path: '/',
             element: Auth
         }
     ]
