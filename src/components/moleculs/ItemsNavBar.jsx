@@ -29,6 +29,11 @@ export default function ItemsNavBar({ menu, setMenu }) {
                 </li>
                 <li>
                     <Link className="navbar-item__link" to="/">
+                        Formularios
+                    </Link>
+                </li>
+                <li>
+                    <Link className="navbar-item__link" to="/">
                         Editar Perfil
                     </Link>
                 </li>

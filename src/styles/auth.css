@@ -148,7 +148,7 @@
     margin: 0 5px;
 }
 
-.login-form p {
+.login-password {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -188,7 +188,7 @@
     padding: 10px 0;
 }
 
-.login-form p {
+.login-password {
     text-align: center;
     margin-bottom: 10px;
     font-size: 1.2rem;
@@ -355,7 +355,7 @@
         font-size: 1rem;
     }
 
-    .login-form p {
+    .login-password {
         font-size: 1rem;
     }
 }
