@@ -54,14 +54,14 @@ export default function ItemsNavBar({ menu, setMenu }) {
           </li>
         </ul>
       ) : (
-        <ul>
+        <ul className={!menu ? "navbar-items" : "navbar-items__show"}>
           <li>
-            <Link className="navbar-item__link" to="/" target="_blank">
+            <Link className="navbar-item__link" to="/">
               Formularios
             </Link>
           </li>
           <li>
-            <Link className="navbar-item__link" to="/">
+            <Link className="navbar-item__link start-btn" to="/auth">
               Comenzar
             </Link>
           </li>

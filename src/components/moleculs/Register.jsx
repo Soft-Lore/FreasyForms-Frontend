@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../services/validates/auth";
 import { useUser } from "../hooks/index";
+import { Link } from "react-router-dom"
 
 export default function Register({ toggleModal }) {
   const { login } = useUser();
@@ -30,7 +31,9 @@ export default function Register({ toggleModal }) {
       <div className="signup">
         <div className="signup-welcome">
           <div className="signup-titles">
-            <img src={logo} alt="logo" className="auth-logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" className="auth-logo" />
+            </Link>
             <p className="title1">
               Crea encuestas y
               <br />

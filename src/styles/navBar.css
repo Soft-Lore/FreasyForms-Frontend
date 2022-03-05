@@ -79,9 +79,9 @@
 
 .navbar ul li .start-btn {
     background-color: blue;
-    padding: 5px 15px;
     color: #ffffff;
     border-radius: 5px;
+    width: 100%;
 }
 
 .dropbtn-right {

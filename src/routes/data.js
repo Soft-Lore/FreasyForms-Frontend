@@ -38,7 +38,11 @@ export const routes = {
     root: [
         {
             path: '/',
+            element: AboutUs
+        },
+        {
+            path: "/auth",
             element: Auth
-        }
+        },
     ]
 }
