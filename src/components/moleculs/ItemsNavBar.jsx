@@ -21,7 +21,8 @@ export default function ItemsNavBar({ menu, setMenu }) {
   return (
     <>
       {isLogged ? (
-        <ul className={menu ? "dropdown-content active-dropdown" : "dropdown-content"}>
+        <div className={menu ? "dropdown-content active-dropdown" : "dropdown-content"}>
+          <ul>
           <li className="navbar-item__link">
             <Link to="/surveys">
               Mis Formularios
@@ -36,7 +37,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
                     </Link>
                 </li>
                 <li>
-                    <Link className="navbar-item__link" to="/">
+                    <Link className="navbar-item__link" to="/surveys">
                         Formularios
                     </Link>
                 </li>
@@ -48,7 +49,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
                 <li>
                     <button
                         onClick={(e) => toggleModal(e)}
-                        className="button button-logout navbar-item__link"
+                        className="button button-logout"
                     >
                         Cerrar Sesión
                     </button>
@@ -60,20 +61,23 @@ export default function ItemsNavBar({ menu, setMenu }) {
               <img src={profile} alt="profile-img" />
             </div>
           </li>
-        </ul>
+          </ul>
+        </div>
       ) : (
-        <ul className={!menu ? "navbar-items" : "navbar-items__show"}>
-          <li>
-            <Link className="navbar-item__link" to="/surveys">
-              Formularios
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item__link start-btn" to="/auth">
-              Comenzar
-            </Link>
-          </li>
-        </ul>
+        <div className={!menu ? "navbar-items" : "navbar-items__show"}>
+          <ul>
+            <li>
+              <Link className="navbar-item__link" to="/surveys">
+                Formularios
+              </Link>
+            </li>
+            <li>
+              <Link className="navbar-item__link start-btn" to="/auth">
+                Comenzar
+              </Link>
+            </li>
+          </ul>
+        </div>
       )}
       <Modal show={show} toggle={toggleModal}>
         <h1 className="title-logout">¿Seguro quieres Cerrar Sesión?</h1>

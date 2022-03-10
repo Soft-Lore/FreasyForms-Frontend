@@ -522,6 +522,10 @@ template {
   .slick-prev:before, .slick-next:before {
     font-size: 2rem;
   }
+
+  .slick-prev:before {
+    right: 5px;
+  }
 }
 
 @media screen and (max-width: 420px) {

@@ -48,8 +48,10 @@
     margin-right: auto;
     width: 30%;
     height: 300px;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 6px #00000033;
+}
+
+.welcome-img img {
+    width: 80%;
 }
 
 .welcome-btn__start {
@@ -94,18 +96,6 @@
     font-size: 1.1rem;
     color: #545454;
     font-weight: 400;
-}
-
-.example-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 30%;
-    height: 300px;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 6px #00000033;
 }
 
 .block-info__container:nth-child(even) {

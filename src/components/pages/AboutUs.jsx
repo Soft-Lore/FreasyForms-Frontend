@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-import { Footer, NavBar } from '../organisms/index'
+import React from 'react';
+import { Footer } from '../organisms/index'
 
 export default function AboutUs() {
-  const [menu, setMenu] = useState(false);
-
   return (
     <>
-      <NavBar menu={menu} setMenu={setMenu} />
       <section className="welcome-container">
           <div className="welcome-info__content">
               <div className="welcome-info">
@@ -20,7 +17,7 @@ export default function AboutUs() {
                   </p>
               </div>
               <div className="welcome-img">
-                  <img src="" alt="welcome-img" />
+                  <img src="https://cdn-icons-png.flaticon.com/512/4481/4481167.png" alt="welcome-img"/>
               </div>
           </div>
           <div className="welcome-btn__start">
@@ -28,8 +25,8 @@ export default function AboutUs() {
           </div>
       </section>
       <section className="block-info__container">
-          <div className="example-img">
-              <img src="" alt="welcome-img" />
+          <div className="welcome-img">
+              <img src="https://cdn-icons-png.flaticon.com/512/4481/4481203.png" alt="welcome-img" />
           </div>
           <div className="block-info">
               <h2 className="title block-info__title">
@@ -49,13 +46,13 @@ export default function AboutUs() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, consequuntur alias. Quasi sequi fugit numquam soluta. Recusandae sint repellat in.
               </p>
           </div>
-          <div className="example-img">
-              <img src="" alt="welcome-img" />
+          <div className="welcome-img">
+              <img src="https://cdn-icons-png.flaticon.com/512/4481/4481293.png" alt="welcome-img" />
           </div>
       </section>
       <section className="block-info__container">
-          <div className="example-img">
-              <img src="" alt="welcome-img" />
+          <div className="welcome-img">
+              <img src="https://cdn-icons-png.flaticon.com/512/4481/4481144.png" alt="welcome-img" />
           </div>
           <div className="block-info">
               <h2 className="title block-info__title">

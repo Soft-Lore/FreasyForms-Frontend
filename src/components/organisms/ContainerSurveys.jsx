@@ -20,6 +20,7 @@ export default function ContainerSurveys() {
         breakpoint: 1500,
         settings: {
          slidesToShow: 4,
+         slidesToScroll: 4,
         }
       },
       {
@@ -31,13 +32,15 @@ export default function ContainerSurveys() {
       {
         breakpoint: 1060,
         settings: {
-         slidesToShow: 2
+         slidesToShow: 2,
+         slidesToScroll: 2,
         }
       },
       {
         breakpoint: 700,
         settings: {
          slidesToShow: 1,
+         slidesToScroll: 1,
         }
        }
     ]
