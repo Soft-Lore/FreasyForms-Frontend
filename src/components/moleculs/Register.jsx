@@ -8,9 +8,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../services/validates/auth";
 import { useUser } from "../hooks/index";
 import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 export default function Register({ toggleModal }) {
   const { login } = useUser();
+  const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
@@ -19,8 +22,8 @@ export default function Register({ toggleModal }) {
     resolver: yupResolver(registerSchema),
   });
   const onSubmit = (data) => {
-    console.log(data);
     login();
+    navigate('/')
   };
 
   return (

@@ -5,17 +5,25 @@ import profile from "../../assets/snk-titan-steven.png";
 import { Modal } from "./index"
 import { Link } from "react-router-dom";
 import { useModal } from '../hooks/index'
+import { useNavigate } from "react-router-dom";
 
 export default function ItemsNavBar({ menu, setMenu }) {
   const { logout, isLogged } = useUser();
+  const navigate = useNavigate()
   const {show, toggleModal} = useModal()
+
+  const logOut = () => {
+    logout()
+    toggleModal()
+    navigate('/')
+  }
 
   return (
     <>
       {isLogged ? (
         <ul className={menu ? "dropdown-content active-dropdown" : "dropdown-content"}>
           <li className="navbar-item__link">
-            <Link to="/" target="_blank">
+            <Link to="/surveys">
               Mis Formularios
             </Link>
             <img onClick={() => setMenu((value) => !value)} className="dropbtn" src={menu_1} alt="menu-tres-puntos" />
@@ -56,7 +64,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
       ) : (
         <ul className={!menu ? "navbar-items" : "navbar-items__show"}>
           <li>
-            <Link className="navbar-item__link" to="/">
+            <Link className="navbar-item__link" to="/surveys">
               Formularios
             </Link>
           </li>
@@ -71,7 +79,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
         <h1 className="title-logout">¿Seguro quieres Cerrar Sesión?</h1>
         <div className="navbar-logout__buttons">
             <button className="button-effect-one-red navbar-cancel__button" onClick={e => toggleModal(e)}>Cancelar</button>
-            <button className="button-effect-one navbar-logout__button" onClick={() => logout()}>Aceptar</button>
+            <button className="button-effect-one navbar-logout__button" onClick={() => logOut()}>Aceptar</button>
         </div>
       </Modal>
     </>

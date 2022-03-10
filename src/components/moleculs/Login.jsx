@@ -5,9 +5,11 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "../../services/validates/auth";
 import { MessageError } from "../atoms/index";
+import { useNavigate } from 'react-router-dom'
 
 export default function Login({ show, toggleModal }) {
   const { login } = useUser();
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -15,9 +17,10 @@ export default function Login({ show, toggleModal }) {
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
+  
   const onSubmit = (data) => {
-    console.log(data);
     login();
+    navigate('/')
   };
 
   return (
@@ -28,7 +31,7 @@ export default function Login({ show, toggleModal }) {
           className="input-auth input login-form__input"
           type="email"
           placeholder="Usuario o Correo electronico"
-          {...register("name")}
+          {...register("email")}
         />
          <MessageError error={errors?.email?.message} />
         <input

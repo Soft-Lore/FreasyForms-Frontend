@@ -29,10 +29,6 @@ export const routes = {
         {
             path: "/surveys",
             element: Surveys
-        },
-        {
-            path: '/auth',
-            element: Auth
         }
     ],
     root: [
@@ -44,5 +40,9 @@ export const routes = {
             path: "/auth",
             element: Auth
         },
+        {
+            path: "/surveys",
+            element: Surveys
+        }
     ]
 }

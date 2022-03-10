@@ -3,8 +3,7 @@ import { useState } from 'react'
 export default function useModal() {
     const [show, setShow] = useState(false)
 
-    const toggleModal = (e) => {
-        e.stopPropagation()
+    const toggleModal = () => {
         setShow(data => !data)
     }
 
