@@ -42,7 +42,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
                     </Link>
                 </li>
                 <li>
-                    <Link className="navbar-item__link" to="/">
+                    <Link className="navbar-item__link" to="/profile/fdsafsd">
                         Editar Perfil
                     </Link>
                 </li>

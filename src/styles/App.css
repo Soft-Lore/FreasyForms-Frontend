@@ -543,3 +543,5 @@ template {
 @import url('./navBar.css');
 @import url('./modal.css');
 @import url('./surveys.css');
+@import url('./profile.css');
+@import url('./createForm.css');

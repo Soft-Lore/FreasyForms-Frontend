@@ -1,0 +1,326 @@
+.btn-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 9;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 6px #00000033;
+    height: 52px;
+    top: 52px;
+}
+
+.preview-btn {
+    background-color: #ffffff;
+    border: solid 2px blue;
+    color: blue;
+    border-radius: 20px;
+    height: 35px;
+    width: 160px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.preview-btn span {
+    margin-right: 5px;
+}
+
+.save-btn span {
+    margin-right: 5px;
+}
+
+.preview-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.save-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+.save-btn {
+    background-color: blue;
+    border: solid 1px blue;
+    color: #ffffff;
+    border-radius: 20px;
+    height: 35px;
+    width: 160px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.center-container {
+    position: relative;
+    background-color: #EBF0FE;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 10rem;
+}
+
+.survey-container {
+    margin-top: 104px;
+}
+
+.survey-content, .content-center {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 6px #00000033;
+    padding: 1rem 3rem;
+}
+
+.survey-title {
+    border-bottom: solid 1px #00000033;
+}
+
+.survey-title input {
+    border: none;
+    display: block;
+    margin-bottom: 1px;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    outline: none;
+}
+
+.survey-question {
+    border: solid 1px #00000033;
+    border-radius: 20px;
+    padding: 10px 1rem;
+    margin-top: 1rem;
+}
+
+.survey-header {
+    display: flex;
+    align-items: center;
+}
+
+.survey-header .question {
+    border: none;
+    outline: none;
+    margin-right: auto;
+    font-size: 1.3rem;
+}
+
+.survey-header .survey-menu {
+    position: relative;
+    margin-left: auto;
+}
+
+.survey-header .survey-menu img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.dropdown-survey__menu {
+    position: absolute;
+    display: none;
+    background-color: #000000;
+    top: 32px;
+    right: 0;
+}
+
+.menu-active {
+    display: block;
+}
+
+.dropdown-survey__menu::before {
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #000000;
+    position: absolute;
+    top: -7px;
+    left: 81px;
+}
+
+.dropdown-survey__menu li {
+    color: #ffffff;
+    padding: 5px 10px;
+    list-style: none;
+    width: 100px;
+}
+
+.dropdown-survey__menu li:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.plus {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    font-size: 4.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    color: #ffffff;
+    bottom: 2%;
+    right: 2%;
+    border: none;
+    overflow: hidden;
+}
+
+.answer-survey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: solid 1px #00000033;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.answer-survey .option-answer {
+    height: 25px;
+    width: 25px;
+    background-color: #EBF0FE;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.answer-survey .option-label {
+    font-size: 1.3rem;
+    margin-right: auto;
+}
+
+.answer-survey .remove-btn {
+    margin-right: 20px;
+    background: none;
+    border: none;
+}
+
+.text-answer {
+    width: 100%;
+    outline: none;
+    border: 0;
+    margin: 0 25px;
+    font-size: 1rem;
+}
+
+.create-answer {
+    border: solid 1px #0000001e;
+    font-size: 1.3rem;
+}
+
+.option {
+    margin: 0 5px;
+}
+
+.title-modal-content {
+    border-bottom: solid 1px #00000033;
+    padding-bottom: 10px;
+}
+
+.closed-btn {
+    margin-right: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    color: blue;
+    padding: none;
+    cursor: pointer;
+}
+
+.modal-list {
+    margin-top: 12px;
+}
+
+.lst {
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .survey-container, .center-container {
+        padding: 1.5rem 5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .survey-container, .center-container {
+        padding: 1.5rem 1px;
+    }
+
+    .survey-content, .content-center {
+        padding: 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .survey-title input {
+        font-size: 1.5rem;
+    }
+
+    .survey-header .question {
+        font-size: 1.2rem;
+    }
+
+    .answer-survey .option-label {
+        font-size: 1.2rem;
+    }
+
+    .answer-survey .option-answer {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .preview-btn {
+        font-size: 15px;
+        width: 110px;
+    }
+
+    .preview-btn img {
+        display: none;
+    }
+
+    .save-btn img {
+        display: none;
+    }
+
+    .save-btn {
+        font-size: 15px;
+        width: 110px;
+    }
+
+    .answer-survey {
+        height: 45px;
+    }
+
+    .answer-survey .option-label {
+        font-size: 1.1rem;
+    }
+
+    .plus {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .survey-header .question {
+        width: 187px;
+    }
+}

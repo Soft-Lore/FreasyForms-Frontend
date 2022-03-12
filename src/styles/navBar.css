@@ -338,7 +338,7 @@
     
     .navbar-items__show {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: flex-start;
         height: 100vh;
     }
