@@ -32,7 +32,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
           <li className={menu ? "dropdown-submenu dropdown-submenu__active" :"dropdown-submenu navbar-hidden"}>
             <ul>
                 <li>
-                    <Link className="navbar-item__link" to="/">
+                    <Link className="navbar-item__link" to="/create-survey">
                         Crear Formulario
                     </Link>
                 </li>
