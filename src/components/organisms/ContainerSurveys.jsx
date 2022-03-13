@@ -1,17 +1,14 @@
 import React  from "react";
 import { SurveyComponent } from "../atoms/index";
 import { surveys } from "../fakeSurveys";
-import { useSlider } from "../hooks";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 export default function ContainerSurveys() {
-  const { index, toggleNext, toggleBack } = useSlider(surveys.length);
- 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -54,7 +51,7 @@ export default function ContainerSurveys() {
         </div>
        <Slider {...settings}>
         {surveys &&
-                surveys.map((survey, i) => (
+                surveys.map((survey, index) => (
                   <SurveyComponent
                     img={survey.img}
                     author={survey.author}
@@ -62,7 +59,7 @@ export default function ContainerSurveys() {
                     title={survey.title}
                     date={survey.date}
                     key={survey.id}
-                    // cls={i - 1 && 'card-focus__left' && i + 1 && 'card-focus__right'}
+                    cls={(index - 2) % 3 === 0 ? "card-focus__right" : index % 3 === 0 && "card-focus__left"}
                   />
                 ))}
        </Slider>

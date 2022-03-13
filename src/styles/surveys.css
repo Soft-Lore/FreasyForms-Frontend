@@ -146,13 +146,12 @@
 }
 
 @media screen and (min-width: 1060px) {
-    .slick-slide:nth-child(0n + 4),
-    .slick-slide:first-child {
+    .card-focus__left {
         transform-style: preserve-3d;
         transform: perspective(400px) rotateY(10deg) scale(.9);
     }
     
-    .slick-slide:nth-child(3n) {
+    .card-focus__right {
         transform-style: preserve-3d;
         transform: perspective(400px) rotateY(-10deg) scale(.9);
     }
