@@ -4,18 +4,18 @@ import { IoIosRemove } from 'react-icons/io'
 
 export default function QuestionSurvey() {
   return (
-    <div class="survey-question">
-      <div class="survey-header">
+    <div className="survey-question">
+      <div className="survey-header">
         <input
-          class="question"
+          className="question"
           type="text"
           name="survey-question"
           id="survey-question"
           placeholder="Pregunta..."
         />
-        <div class="survey-menu">
+        <div className="survey-menu">
           <FiMoreVertical />
-          <ul class="dropdown-survey__menu">
+          <ul className="dropdown-survey__menu">
             <li data-option="editar">
               <span>Editar</span>
             </li>
@@ -25,26 +25,26 @@ export default function QuestionSurvey() {
           </ul>
         </div>
       </div>
-      <div class="survey-body">
-        <div class="answer-survey">
-          <input class="option-answer" type="radio" name="answer" id="answer" />
-          <label class="option-label" for="answer">
+      <div className="survey-body">
+        <div className="answer-survey">
+          <input className="option-answer" type="radio" name="answer" id="answer" />
+          <label className="option-label">
             option 1
           </label>
-          <button class="remove-btn">
+          <button className="remove-btn">
               <IoIosRemove />
           </button>
         </div>
-        <div class="answer-survey create-answer">
-          <input class="option-answer" type="radio" name="answer" id="answer" />
+        <div className="answer-survey create-answer">
+          <input className="option-answer" type="radio" name="answer" id="answer" />
           <input
-            class="text-answer option"
+            className="text-answer option"
             type="text"
             name="answer"
             id="answer"
             placeholder="Escribir option..."
           />
-          <button class="remove-btn">
+          <button className="remove-btn">
               <IoIosRemove />
           </button>
         </div>

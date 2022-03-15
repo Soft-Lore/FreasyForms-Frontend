@@ -43,6 +43,10 @@ export const routes = {
         {
             path: "/surveys",
             element: Surveys
-        }
+        },
+        {
+            path: "/create-survey",
+            element: CreateSurvey
+        },
     ]
 }

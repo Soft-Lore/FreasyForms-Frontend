@@ -3,18 +3,18 @@ import { FiMoreVertical } from 'react-icons/fi'
 
 export default function QuestionOpenSurvey() {
   return (
-    <div class="survey-question">
-      <div class="survey-header">
+    <div className="survey-question">
+      <div className="survey-header">
         <input
-          class="question"
+          className="question"
           type="text"
           name="survey-question"
           id="survey-question"
           placeholder="Pregunta..."
         />
-        <div class="survey-menu">
+        <div className="survey-menu">
           <FiMoreVertical />
-          <ul class="dropdown-survey__menu">
+          <ul className="dropdown-survey__menu">
             <li data-option="editar">
               <span>Editar</span>
             </li>
@@ -24,10 +24,10 @@ export default function QuestionOpenSurvey() {
           </ul>
         </div>
       </div>
-      <div class="survey-body">
-        <div class="answer-survey">
+      <div className="survey-body">
+        <div className="answer-survey">
           <input
-            class="text-answer"
+            className="text-answer"
             type="text"
             name="answer"
             id="answer"

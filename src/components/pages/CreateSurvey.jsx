@@ -11,12 +11,16 @@ import { useModal } from '../hooks'
 export default function CreateSurvey() {
   const {show, toggleModal} = useModal()
 
+  const createQuestion = (e) => {
+    console.log(e.target.value)
+  }
+
   return (
     <>
       <NavBarSurvey />
-      <form class="survey-container center-container">
-        <div class="survey-content content-center">
-          <div class="survey-title">
+      <form className="survey-container center-container">
+        <div className="survey-content content-center">
+          <div className="survey-title">
             <input
               type="text"
               name="survey-title"
@@ -28,17 +32,17 @@ export default function CreateSurvey() {
           <QuestionOpenSurvey />
         </div>
       </form>
-        <button class="plus" onClick={() => toggleModal()}>
+        <button className="plus" onClick={() => toggleModal()}>
           <MdAdd />
         </button>
       <Modal show={show} toggle={toggleModal}>
-        <div class="title-modal-content">
-          <h2 class="title-modal">Selecciona el formato</h2>
+        <div className="title-modal-content">
+          <h2 className="title-modal">Selecciona el formato</h2>
         </div>
-        <div class="modal-list">
-          <select className="modal-list__select">
-            <option>Seleccion multiple</option>
-            <option>Pregunta Abierta</option>
+        <div className="modal-list">
+          <select className="modal-list__select" onChange={(e) => createQuestion(e)}>
+            <option value="options">Seleccion multiple</option>
+            <option value="open">Pregunta Abierta</option>
           </select>
         </div>
       </Modal>
