@@ -122,7 +122,8 @@
     cursor: pointer;
 }
 
-.dropdown-survey__menu {
+.dropdown-survey__menu,
+.survey-menu__show {
     position: absolute;
     display: none;
     background-color: #000000;
@@ -134,7 +135,8 @@
     display: block;
 }
 
-.dropdown-survey__menu::before {
+.dropdown-survey__menu::before,
+.survey-menu__show::before {
     content: "";
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -144,16 +146,29 @@
     left: 81px;
 }
 
-.dropdown-survey__menu li {
+.dropdown-survey__menu li,
+.survey-menu__show li {
     color: #ffffff;
     padding: 5px 10px;
     list-style: none;
     width: 100px;
 }
 
-.dropdown-survey__menu li:hover {
+.dropdown-survey__menu li:hover,
+.survey-menu__show li:hover {
     background-color: #333333;
     cursor: pointer;
+}
+
+.survey-menu__checkbox {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    opacity: 0;
+}
+
+.survey-menu__checkbox:checked ~ .dropdown-survey__menu {
+    display: block;
 }
 
 .plus {
@@ -202,6 +217,7 @@
     margin-right: 20px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .text-answer {
@@ -252,6 +268,22 @@
     outline: none;
     color: #333;
     font-size: 1.1rem;
+}
+
+.create-survey__button {
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin: 20px auto;
+}
+
+.add-option__button {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 10px;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 900px) {

@@ -1,9 +1,10 @@
 import React from "react";
 import { FiMoreVertical } from 'react-icons/fi'
 
-export default function QuestionOpenSurvey() {
+export default function QuestionOpenSurvey({questions}) {
   return (
-    <div className="survey-question">
+    <>
+      <div className="survey-question">
       <div className="survey-header">
         <input
           className="question"
@@ -24,17 +25,7 @@ export default function QuestionOpenSurvey() {
           </ul>
         </div>
       </div>
-      <div className="survey-body">
-        <div className="answer-survey">
-          <input
-            className="text-answer"
-            type="text"
-            name="answer"
-            id="answer"
-            placeholder="Escribir respuesta..."
-          />
-        </div>
-      </div>
     </div>
+    </>
   );
 }

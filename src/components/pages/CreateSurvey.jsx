@@ -1,46 +1,105 @@
 import React from "react";
 import {
   NavBarSurvey,
-  QuestionOpenSurvey,
+  QuestionOption,
   QuestionSurvey,
   Modal,
 } from "../moleculs";
 import { MdAdd } from "react-icons/md";
-import { useModal } from '../hooks'
+import { useModal, useSurvey } from "../hooks";
 
 export default function CreateSurvey() {
-  const {show, toggleModal} = useModal()
-
-  const createQuestion = (e) => {
-    console.log(e.target.value)
-  }
+  const { show, toggleModal } = useModal();
+  const {
+    survey,
+    handleSubmit,
+    createQuestion,
+    addOptionToQuestion,
+    handleInput,
+    handleInputQuestion,
+    handleInputOption,
+    removeOptionToQuestion,
+    removeQuestion,
+  } = useSurvey(toggleModal);
 
   return (
     <>
-      <NavBarSurvey />
-      <form className="survey-container center-container">
+      <form
+        className="survey-container center-container"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <NavBarSurvey />
         <div className="survey-content content-center">
           <div className="survey-title">
             <input
               type="text"
-              name="survey-title"
-              id="survey-title"
               placeholder="Titulo de la encuesta"
+              name="name"
+              onChange={(e) => handleInput(e)}
             />
           </div>
-          <QuestionSurvey />
-          <QuestionOpenSurvey />
+          {survey.questions.length > 0 ? (
+            <>
+              {survey.questions.map((question) => (
+                <QuestionSurvey
+                  key={question.i}
+                  onChange={(e) => handleInputQuestion(e, question.i)}
+                  question={question}
+                  removeQuestion={removeQuestion}
+                >
+                  {/* If question type === options */}
+                  {question.type === "options" && (
+                    <>
+                      {question.options.map((option, i) => (
+                        <QuestionOption
+                          key={i}
+                          option={option}
+                          value={option.name}
+                          onChange={(e) =>
+                            handleInputOption(e, i, option.question)
+                          }
+                          removeOptionToQuestion={removeOptionToQuestion}
+                        />
+                      ))}
+                      <button
+                        type="button"
+                        onClick={() => addOptionToQuestion(question.i)}
+                        className="button button-effect-one add-option__button"
+                      >
+                        Nueva opción
+                      </button>
+                    </>
+                  )}
+                </QuestionSurvey>
+              ))}
+            </>
+          ) : (
+            <button
+              type="button"
+              className="button button-effect-one create-survey__button"
+              onClick={() => toggleModal()}
+            >
+              Añadir preguntas
+            </button>
+          )}
         </div>
       </form>
-        <button className="plus" onClick={() => toggleModal()}>
-          <MdAdd />
-        </button>
+      <button className="plus" onClick={() => toggleModal()}>
+        <MdAdd />
+      </button>
       <Modal show={show} toggle={toggleModal}>
         <div className="title-modal-content">
           <h2 className="title-modal">Selecciona el formato</h2>
         </div>
         <div className="modal-list">
-          <select className="modal-list__select" onChange={(e) => createQuestion(e)}>
+          <select
+            className="modal-list__select"
+            defaultValue="none"
+            onChange={(e) => createQuestion(e)}
+          >
+            <option disabled name="default" value="none">
+              ----Seleccione una opcion----
+            </option>
             <option value="options">Seleccion multiple</option>
             <option value="open">Pregunta Abierta</option>
           </select>

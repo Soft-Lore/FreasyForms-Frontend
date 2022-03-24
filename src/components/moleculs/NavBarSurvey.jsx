@@ -8,7 +8,7 @@ export default function NavBarSurvey() {
         <span>Vista previa</span>
         <FaEye />
       </button>
-      <button className="nav-survey__btn save-btn">
+      <button type="submit" className="nav-survey__btn save-btn">
         <span>Guardar</span>
         <FaSave />
       </button>
