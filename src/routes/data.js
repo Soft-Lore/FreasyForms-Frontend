@@ -48,5 +48,9 @@ export const routes = {
             path: "/create-survey",
             element: CreateSurvey
         },
+        {
+            path: "/survey/:id",
+            element: Survey
+        },
     ]
 }
