@@ -31,11 +31,11 @@ export default function Survey() {
     ]
   };
   return (
-    <div class="survey-container__info center-container">
+    <div className="survey-container__info center-container">
       <HeaderSurvey survey={survey}/>
-      <div class="content-center">
-        <div class="survey-title">
-          <h2 class="survey-info__title message__title">
+      <div className="content-center">
+        <div className="survey-title">
+          <h2 className="survey-info__title message__title">
             Responder las siguientes preguntas:
           </h2>
         </div>
@@ -45,7 +45,7 @@ export default function Survey() {
             options={question.options}
           />
         ))}
-        <button type="button" class="button-effect-one survey-button">
+        <button type="button" className="button-effect-one survey-button">
           Enviar
         </button>
       </div>

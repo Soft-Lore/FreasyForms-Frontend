@@ -3,9 +3,9 @@ import { InputOption } from '../atoms/index'
 
 export default function QuestionComponent({name, options}) {
   return (
-    <div class="survey-question">
-        <div class="survey-header">
-            <span class="question">
+    <div className="survey-question">
+        <div className="survey-header">
+            <span className="question">
                 {name}
             </span>
         </div>
@@ -13,8 +13,8 @@ export default function QuestionComponent({name, options}) {
             options ? (
                 options.map(option => <InputOption name={option} />)
             ) : (
-                <div class="answer-survey">
-                    <input class="text-answer" type="text" name="answer" id="answer" placeholder="Escribir respuesta..." />
+                <div className="answer-survey">
+                    <input className="text-answer" type="text" name="answer" id="answer" placeholder="Escribir respuesta..." />
                 </div>
             )
         }
