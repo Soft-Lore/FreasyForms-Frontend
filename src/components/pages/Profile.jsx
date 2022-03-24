@@ -21,17 +21,17 @@ export default function Profile() {
               </div>
           </div>
           <form className="form-profile">
-              <label for="name" className="label-form">Nombre</label>
+              <label className="label-form">Nombre</label>
               <input className="input-auth input profile-input" placeholder="Nombre" />
-              <label for="email" className="label-form">Correo</label>
+              <label className="label-form">Correo</label>
               <input className="input-auth input profile-input" type="email" placeholder="Correo electronico" />
               <div className="row-side">
                   <div className="left-side">
-                      <label for="password" className="label-form">Contraseña</label>
+                      <label className="label-form">Contraseña</label>
                       <input className="input-auth input profile-input" type="password" placeholder="Contraseña" />
                   </div>
                   <div className="right-side">
-                      <label for="password" className="label-form">Confirmar</label>
+                      <label className="label-form">Confirmar</label>
                       <input className="input-auth input profile-input" type="password" placeholder="Confirmar contraseña" />
                   </div>
               </div>
