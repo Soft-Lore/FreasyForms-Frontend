@@ -24,7 +24,7 @@ export default function ItemsNavBar({ menu, setMenu }) {
         <div className={menu ? "dropdown-content active-dropdown" : "dropdown-content"}>
           <ul>
           <li className="navbar-item__link">
-            <Link to="/surveys">
+            <Link to="/surveys/steven">
               Mis Formularios
             </Link>
             <img onClick={() => setMenu((value) => !value)} className="dropbtn" src={menu_1} alt="menu-tres-puntos" />

@@ -56,5 +56,9 @@ export const routes = {
             path: "/survey/result/:id",
             element: ResultOfSurvey
         },
+        {
+            path: "/surveys/:user",
+            element: MySurveys
+        },
     ]
 }

@@ -40,7 +40,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 5,
+        id: 6,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -48,7 +48,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 4,
+        id: 7,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbaF30nrZOMZn0SVPLswD7L9je1ImAGXi-Q&usqp=CAU",
         author: "Eliel Musulman", 
         title: "Kimetsu No yaiba",
@@ -56,7 +56,7 @@ export const surveys = [
         date: "10-08-21"
     },
     {
-        id: 5,
+        id: 8,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -64,7 +64,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 5,
+        id: 9,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -72,7 +72,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 4,
+        id: 10,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbaF30nrZOMZn0SVPLswD7L9je1ImAGXi-Q&usqp=CAU",
         author: "Eliel Musulman", 
         title: "Kimetsu No yaiba",
@@ -80,7 +80,7 @@ export const surveys = [
         date: "10-08-21"
     },
     {
-        id: 5,
+        id: 11,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -88,7 +88,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 5,
+        id: 12,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -96,7 +96,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 4,
+        id: 13,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbaF30nrZOMZn0SVPLswD7L9je1ImAGXi-Q&usqp=CAU",
         author: "Eliel Musulman", 
         title: "Kimetsu No yaiba",
@@ -104,7 +104,7 @@ export const surveys = [
         date: "10-08-21"
     },
     {
-        id: 5,
+        id: 14,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -112,7 +112,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 5,
+        id: 15,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -120,7 +120,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 4,
+        id: 16,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbaF30nrZOMZn0SVPLswD7L9je1ImAGXi-Q&usqp=CAU",
         author: "Eliel Musulman", 
         title: "Kimetsu No yaiba",
@@ -128,7 +128,7 @@ export const surveys = [
         date: "10-08-21"
     },
     {
-        id: 5,
+        id: 17,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
@@ -136,7 +136,7 @@ export const surveys = [
         date: "66-66-66"
     },
     {
-        id: 5,
+        id: 18,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLJoeTcRKdIK7lIBFJEFP4YyzigRAdC4NKvQ&usqp=CAU",
         author: "Moises Lumbi", 
         title: "Uzumaki Naruto",
