@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function useSurvey(toggleModal) {
+  const [error, setError] = useState("");
   const [survey, setSurvey] = useState({
     name: "",
     questions: [],
@@ -8,7 +9,68 @@ export default function useSurvey(toggleModal) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(survey);
+
+    if (survey.name.length > 2 && survey.questions.length > 0) {
+      const response = survey.questions.map((question, index) =>
+        validateQuestionsToSurvey(question, index)
+      );
+
+      const data = response.find((resp) => resp.ok === false);
+
+      if (data) setError(data.msg);
+      else console.log(survey);
+    } else {
+      setError("favor, complete su encuesta");
+    }
+  };
+
+  const validateQuestionsToSurvey = (question, index) => {
+    if (question && question.name.length > 0) {
+      if (question.type === "options") {
+        const response = question.options.map((option, i) =>
+          validateOptionToSurvey(option, i, index)
+        );
+
+        const data = response.find((resp) => resp.ok === false);
+
+        if (data) {
+          return data;
+        } else {
+          return {
+            ok: true,
+            msg: "enviado",
+          };
+        }
+      }
+
+      return {
+        ok: true,
+        msg: "enviado",
+      };
+    } else {
+      return {
+        ok: false,
+        msg: `Favor, revise que los campos de la pregunta ${
+          index + 1
+        } esten correctos`,
+      };
+    }
+  };
+
+  const validateOptionToSurvey = (option, i, index) => {
+    if (option && option.name.length > 0) {
+      return {
+        ok: true,
+        msg: "enviado",
+      };
+    } else {
+      return {
+        ok: false,
+        msg: `Favor, revise que la opcion ${i + 1} de la pregunta ${
+          index + 1
+        } esten correctos`,
+      };
+    }
   };
 
   const createQuestion = (e) => {
@@ -143,6 +205,7 @@ export default function useSurvey(toggleModal) {
 
   return {
     survey,
+    error,
     handleSubmit,
     createQuestion,
     addOptionToQuestion,

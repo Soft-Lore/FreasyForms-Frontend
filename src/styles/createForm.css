@@ -165,6 +165,7 @@
     right: 2px;
     top: 2px;
     opacity: 0;
+    cursor: pointer;
 }
 
 .survey-menu__checkbox:checked ~ .dropdown-survey__menu {

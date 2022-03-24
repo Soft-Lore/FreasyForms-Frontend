@@ -468,6 +468,11 @@ template {
   width: 100%;
 }
 
+.message-error__center {
+  margin-top: 15px;
+  text-align: center;
+}
+
 .slick-prev,
 .slick-next {
   z-index: 5;

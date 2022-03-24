@@ -5,6 +5,7 @@ import {
   QuestionSurvey,
   Modal,
 } from "../moleculs";
+import { MessageError } from "../atoms";
 import { MdAdd } from "react-icons/md";
 import { useModal, useSurvey } from "../hooks";
 
@@ -12,6 +13,7 @@ export default function CreateSurvey() {
   const { show, toggleModal } = useModal();
   const {
     survey,
+    error,
     handleSubmit,
     createQuestion,
     addOptionToQuestion,
@@ -82,6 +84,7 @@ export default function CreateSurvey() {
               Añadir preguntas
             </button>
           )}
+        {error && <MessageError error={error} center/>}
         </div>
       </form>
       <button className="plus" onClick={() => toggleModal()}>
