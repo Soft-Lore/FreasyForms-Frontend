@@ -129,3 +129,13 @@
 .not-result-img {
     width: 40%;
 }
+
+.title-result {
+  font-family: 'Raleway', sans-serif;
+}
+
+.graphic > canvas {
+  width: 300px !important;
+  height: 300px !important;
+  margin: auto;
+}
