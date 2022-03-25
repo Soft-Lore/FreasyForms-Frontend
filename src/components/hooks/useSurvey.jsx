@@ -4,13 +4,14 @@ export default function useSurvey(toggleModal) {
   const [error, setError] = useState("");
   const [survey, setSurvey] = useState({
     name: "",
+    description: "",
     questions: [],
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (survey.name.length > 2 && survey.questions.length > 0) {
+    if (survey.name.length > 2 && survey.description.length > 2 && survey.questions.length > 0) {
       const response = survey.questions.map((question, index) =>
         validateQuestionsToSurvey(question, index)
       );

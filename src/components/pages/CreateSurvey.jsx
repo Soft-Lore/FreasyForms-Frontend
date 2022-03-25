@@ -40,6 +40,9 @@ export default function CreateSurvey() {
               onChange={(e) => handleInput(e)}
             />
           </div>
+          <div className="survey-description">
+            <textarea name="description" placeholder="Descripcion de la encuesta" onChange={(e) => handleInput(e)} />
+          </div>
           {survey.questions.length > 0 ? (
             <>
               {survey.questions.map((question) => (

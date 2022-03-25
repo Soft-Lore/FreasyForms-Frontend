@@ -8,33 +8,7 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function ResultOfSurvey() {
-  const survey = [
-    {
-      name: "Mi pregunta",
-      options: [
-        { option: "1", rate: 3 },
-        { option: "2", rate: 1 },
-        { option: "3", rate: 1 },
-      ],
-    },
-    {
-      name: "Mi pregunta 2",
-      options: [
-        { option: "1", rate: 2 },
-        { option: "2", rate: 5 },
-        { option: "3", rate: 2 },
-      ],
-    },
-    {
-      name: "Mi pregunta 3",
-      options: [
-        { option: "1", rate: 6 },
-        { option: "2", rate: 7 },
-        { option: "3", rate: 2 },
-      ],
-    },
-  ];
-  const data = useGraphics(survey);
+  const data = useGraphics();
 
   const chartData = (index, resp, label) => ({
     labels: resp,
