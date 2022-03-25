@@ -1,15 +1,3 @@
-.delete-btn {
-  border: solid 2px red;
-  color: red;
-  background-color: #ffffff;
-}
-
-.print-btn {
-  border: solid 1px blue;
-  color: #ffffff;
-  background-color: blue;
-}
-
 .survey-results__cotainer {
   margin-top: 104px;
 }
@@ -28,9 +16,11 @@
 }
 
 .answer-paragraph {
+  height: 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: height .2s ease;
 }
 
 /*Es la clase para mostrar el texto completo*/
@@ -65,8 +55,8 @@
 }
 
 .collapse-content__checkbox:checked ~ .answer-paragraph {
-    height: max-content;
-    overflow: none;
+    height: 60px;
+    overflow: auto;
     white-space: normal;
     text-overflow: clip;
 }

@@ -4,6 +4,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { useGraphics } from "../hooks";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { AiOutlineDelete } from "react-icons/ai";
+import { BsFillPrinterFill } from "react-icons/bs"
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -23,7 +25,16 @@ export default function ResultOfSurvey() {
 
   return (
     <>
-      <NavBarSurvey />
+      <NavBarSurvey>
+        <button className="nav-survey__btn preview-btn">
+          <span>Imprimir</span>
+          <BsFillPrinterFill />
+        </button>
+        <button type="submit" className="nav-survey__btn delete-btn">
+          <span>Eliminar</span>
+          <AiOutlineDelete />
+        </button>
+      </NavBarSurvey>
       <div className="survey-results__cotainer center-container">
         <div className="survey-results__content content-center">
           <div className="survey-title__container">

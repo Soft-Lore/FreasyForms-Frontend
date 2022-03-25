@@ -8,6 +8,7 @@ import {
 import { MessageError } from "../atoms";
 import { MdAdd } from "react-icons/md";
 import { useModal, useSurvey } from "../hooks";
+import { FaEye, FaSave } from "react-icons/fa";
 
 export default function CreateSurvey() {
   const { show, toggleModal } = useModal();
@@ -30,7 +31,16 @@ export default function CreateSurvey() {
         className="survey-container center-container"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <NavBarSurvey />
+        <NavBarSurvey>
+          <button className="nav-survey__btn preview-btn">
+            <span>Vista previa</span>
+            <FaEye />
+          </button>
+          <button type="submit" className="nav-survey__btn save-btn">
+            <span>Guardar</span>
+            <FaSave />
+          </button>
+        </NavBarSurvey>
         <div className="survey-content content-center">
           <div className="survey-title">
             <input
