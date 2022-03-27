@@ -1,0 +1,63 @@
+.footer {
+    display: flex;
+    border-top: 1px solid #707070;
+    width: 100%;
+    padding: 10px;
+}
+
+.left-side__footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.softlore-mark {
+    font-size: large;
+    margin-bottom: 5px !important;
+}
+
+.privacy-footer {
+    margin-bottom: 5px !important;
+    cursor: pointer;
+}
+
+.contact-footer {
+    cursor: pointer;
+}
+
+.privacy-footer:hover {
+    color: blue;
+}
+
+.contact-footer:hover {
+    color: blue;
+}
+
+.right-side__footer {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.icon__footer {
+    color: #7b9eff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.facebook-icon:hover {
+    color: blue;
+}
+
+.github-icon:hover {
+    color: black;
+}
+
+.instagram-icon:hover {
+    color: #ff1493;
+}
+
+.linkedin-icon:hover {
+    color: orangered;
+}

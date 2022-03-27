@@ -102,17 +102,6 @@
     background-color: #EBF0FE;
 }
 
-.footer-container {
-    border-top: solid 1px #707070;
-    padding: 1.5rem 1rem;
-}
-
-.footer-content span {
-    color: #545454;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 @media screen and (max-width: 1280px) {
     .welcome-info {
         width: 33%;
