@@ -157,6 +157,27 @@
     }
 }
 
+@media screen and (max-width: 1060px) {
+    .card {
+        width: 350px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        margin-left: 35px;
+    }
+    
+}
+
+@media screen and (max-width: 950px) {
+    .card {
+        width: 300px;
+    }
+}
+
 
 .card-author {
     position: absolute;
@@ -289,6 +310,7 @@
 
     .card {
         height: auto;
+        width: auto;
     }
 
     .card-info__title {
@@ -346,6 +368,10 @@
         padding: 10px 15px;
         font-size: 1rem;
     }
+
+    .card {
+        margin-bottom: 35px;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -372,7 +398,7 @@
     }
 
     .card {
-        width: 90%;
+        width: 80%;
         height: auto;
     }
 
@@ -472,5 +498,6 @@
 
     .card {
         height: 328px;
+        margin-bottom: 50px;
     }
 }
